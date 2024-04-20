@@ -1,0 +1,96 @@
+#form {
+  padding-top: 230px;
+  padding-bottom: 130px;
+}
+
+#why-us {
+  padding-top: 85px;
+  margin-bottom: -170px;
+}
+
+#about-us {
+  padding-top: 85px;
+  padding-bottom: 85px;
+}
+
+.form-title {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#actual-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  #actual-form {
+    width: 80%;
+  }
+}
+
+#label {
+  display: block;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+input[type="file"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  input[type="file"],
+  input[type="number"],
+  textarea {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  input[type="file"],
+  input[type="number"],
+  textarea {
+    padding: 6px;
+    font-size: 12px;
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #71aeef;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+input[type="submit"]:hover {
+  background-color: #add7ff;
+}
+
+.submit-container {
+  display: flex;
+  justify-content: center;
+}
+
+#no-decoration {
+  text-decoration: none;
+  color: rgb(170, 170, 170);
+}
