@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+  background-color: #1c1c1c;
+  font-family: 'Poppins', sans-serif;
+  color: #e0e0e0;
+  /* Change the font color to a slightly off-white */
+}
+
+#graph {
+  width: 100%;
+  height: 600px;
+  background-color: #222;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  margin-top: 20px;
+}
+
+.node {
+  fill: #6c757d;
+  /* Change the fill color to a minimalistic dark gray */
+  stroke: #495057;
+  /* Change the stroke color to a darker gray */
+  stroke-width: 2px;
+  cursor: pointer;
+  transition: fill 0.3s ease, stroke 0.3s ease;
+  /* Add transition for stroke color */
+}
+
+.node:hover {
+  fill: #495057;
+  /* Change the hover fill color to a slightly darker gray */
+  stroke: #343a40;
+  /* Change the hover stroke color to an even darker gray */
+}
+
+.texts text {
+  fill: #e0e0e0;
+  /* Change the font color of the text within the nodes */
+  font-size: 14px;
+  text-anchor: middle;
+  pointer-events: none;
+  font-weight: 500;
+}
+
+.link {
+  stroke: #555;
+  stroke-opacity: 0.6;
+  stroke-width: 1px;
+}
+
+.card {
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  background-color: #333;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-header {
+  background-color: #444;
+  padding: 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.footer {
+  background-color: #222;
+  padding: 20px 0;
+  margin-top: 40px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+  #graph {
+    height: 400px;
+  }
+}

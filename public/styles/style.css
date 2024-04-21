@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
 #form {
   padding-top: 230px;
   padding-bottom: 130px;
@@ -49,6 +59,7 @@ textarea {
 }
 
 @media (max-width: 768px) {
+
   input[type="file"],
   input[type="number"],
   textarea {
@@ -58,6 +69,7 @@ textarea {
 }
 
 @media (max-width: 480px) {
+
   input[type="file"],
   input[type="number"],
   textarea {
@@ -93,4 +105,55 @@ input[type="submit"]:hover {
 #no-decoration {
   text-decoration: none;
   color: rgb(170, 170, 170);
+}
+
+.linkedin {
+  background: linear-gradient(270deg, #8a8a8a, #303030, #bbbbbb, #303030);
+  background-size: 800% 800%;
+
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
 }
