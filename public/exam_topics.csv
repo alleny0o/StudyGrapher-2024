@@ -1,0 +1,7 @@
+Topic,Exam Percentage,Study Time (minutes),Description
+Linked Lists,25%,75,A data structure consisting of a sequence of nodes, each storing a reference to the next node
+Binary Trees,25%,75,A tree data structure in which each node has at most two children
+Graphs,15%,45,A non-linear data structure consisting of vertices and edges
+Recursion,15%,45,A programming technique where a function calls itself to solve a problem
+Hash Tables,10%,30,A data structure that associates keys with values and allows for efficient lookup and insertion
+Sorting Algorithms,10%,30,Algorithms used to rearrange elements in a specific order

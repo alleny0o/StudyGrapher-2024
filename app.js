@@ -72,7 +72,11 @@ function sendEmails() {
       confirmedEmails.forEach(email => {
         // TODO: Once the site is deployed... change the local host to the site name.
         const unsubscribeLink = `http://localhost:3000/unsubscribe/${email}`;
-        const emailText = `Do your best!...\n\nTo unsubscribe, click here: ${unsubscribeLink}`;
+        const csvData = fs.readFileSync('/study.csv', 'utf8');
+        const lines = csvData.split('\n');
+        const randomIndex = Math.floor(Math.random() * lines.length);
+        const randomLine = lines[randomIndex];
+        const emailText = `The weekly study tip is\n \n\nTo unsubscribe, click here: ${unsubscribeLink}`;
         notifyAdmin(email, emailText);
       });
     }
@@ -96,7 +100,7 @@ app.get('/unsubscribe/:email', (req, res) => {
   });
 });
 
-cron.schedule('0 12 * * 1', sendEmails);
+cron.schedule('* * * * *', sendEmails);
 
 app.get('/', (req, res) => {
   res.render('index.ejs');
