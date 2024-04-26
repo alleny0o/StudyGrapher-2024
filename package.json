@@ -4,8 +4,7 @@
   "description": "Hackathon Web Application that creates study guides based on practice test material.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "mkdir -p dist && cp -r views/* dist/ && cp -r public/* dist/"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "MIT",
