@@ -4,7 +4,7 @@ const multer = require('multer');
 const dotenv = require('dotenv').config();
 const fs = require('fs');
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const AWS = require('aws-sdk');
 const cron = require('node-cron');
@@ -72,16 +72,16 @@ function sendEmails() {
       confirmedEmails.forEach(email => {
         // TODO: Once the site is deployed... change the local host to the site name.
         const unsubscribeLink = `http://localhost:3000/unsubscribe/${email}`;
-        const csvData = fs.readFileSync('/study.csv', 'utf8');
-        const lines = csvData.split('\n');
-        const randomIndex = Math.floor(Math.random() * lines.length);
-        const randomLine = lines[randomIndex];
-        const emailText = `The weekly study tip is\n \n\nTo unsubscribe, click here: ${unsubscribeLink}`;
+        const emailText = `The one and only study tip is to turn stop getting distracted by SOCIAL MEDIA! :)\n\nTo unsubscribe, click here: ${unsubscribeLink}`;
         notifyAdmin(email, emailText);
       });
     }
   });
 }
+
+app.use('/healthcheck', (req, res) => {
+  res.status(200).send("ok");
+});
 
 app.get('/unsubscribe/:email', (req, res) => {
   const email = req.params.email;
@@ -100,7 +100,7 @@ app.get('/unsubscribe/:email', (req, res) => {
   });
 });
 
-cron.schedule('* * * * *', sendEmails);
+cron.schedule('0 9 * * 1', sendEmails);
 
 app.get('/', (req, res) => {
   res.render('index.ejs');
